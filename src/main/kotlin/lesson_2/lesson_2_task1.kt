@@ -5,8 +5,8 @@ fun main() {
     val grade2: Byte = 4
     val grade3: Byte = 3
     val grade4: Byte = 5
-    val studentCount = 4.0f
+    val studentCount: Byte = 4
 
-    val meanGrade: Float = (grade1 + grade2 + grade3 + grade4) / studentCount
+    val meanGrade: Float = (grade1 + grade2 + grade3 + grade4).toFloat() / studentCount
     println(String.format("%.2f", meanGrade))
 }
