@@ -4,10 +4,10 @@ fun main() {
     println("Введите год своего рождения:")
     val userYear = readln().toInt()
     val currentYear = 2025
-    if (currentYear - userYear >= AGE_OF_MAJORITY){
+
+    if (currentYear - userYear >= AGE_OF_MAJORITY) {
         println("Показать экран со скрытым контентом")
-    }
-    else {
+    } else {
         println("Показать начальный экран")
     }
 }
