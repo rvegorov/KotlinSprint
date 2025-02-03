@@ -1,6 +1,7 @@
 package org.example.lesson_4
 
 fun main() {
+
     val isSunny: Boolean = true
     val isAwningOpen: Boolean = true
     val humidity: Int = 20
