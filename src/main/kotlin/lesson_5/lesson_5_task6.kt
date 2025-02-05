@@ -8,14 +8,16 @@ fun main() {
 
     val bodyMassIndex = weight / (height * height)
     val bodyMassCategory = when {
-        (bodyMassIndex < 18.5F) -> "Недостаточная масса тела"
-        (bodyMassIndex >= 18.5F && bodyMassIndex < 25) -> " Нормальная масса тела"
-        (bodyMassIndex >= 25 && bodyMassIndex < 30) -> "Избыточная масса тела"
+        (bodyMassIndex < LOW_WEIGHT_LEVEL) -> "Недостаточная масса тела"
+        (bodyMassIndex >= LOW_WEIGHT_LEVEL && bodyMassIndex < NORMAL_WEIGHT_LEVEL) -> " Нормальная масса тела"
+        (bodyMassIndex >= NORMAL_WEIGHT_LEVEL && bodyMassIndex < EXCESS_WEIGHT_LEVEL) -> "Избыточная масса тела"
         else -> "Ожирение"
     }
     println("Ваш ИМТ равен ${"%.2f".format(bodyMassIndex)}")
     println("Это категория \"$bodyMassCategory\"")
 }
 
-
+const val LOW_WEIGHT_LEVEL = 18.5F
+const val NORMAL_WEIGHT_LEVEL = 25F
+const val EXCESS_WEIGHT_LEVEL = 30
 
