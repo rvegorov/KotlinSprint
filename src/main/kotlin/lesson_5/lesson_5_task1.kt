@@ -1,13 +1,13 @@
 package org.example.lesson_5
 
 fun main() {
-    val a = 1
-    val b = 9
+    val fistNumber = 1
+    val secondNumber = 9
 
-    println("Проверка на бота. Сколько будет $a + $b?")
+    println("Проверка на бота. Сколько будет $fistNumber + $secondNumber?")
     val userAnswer = readln().toInt()
 
-    if (userAnswer == a + b) {
+    if (userAnswer == fistNumber + secondNumber) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
