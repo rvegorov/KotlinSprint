@@ -1,17 +1,17 @@
 package org.example.lesson_5
 
 fun main() {
-    val a = 1
-    val b = 32
+    val firstNum = 1
+    val secondNum = 32
 
     println("Угадайте два числа от $MIN_NUMBER до $MAX_NUMBER")
     println("Введите первое число:")
-    val firstNum = readln().toInt()
+    val firstAnswer = readln().toInt()
     println("Введите второе число:")
-    val secondNum = readln().toInt()
+    val secondAnswer = readln().toInt()
 
-    val firstNumIsValid = (firstNum == a || firstNum == b)
-    val secondNumIsValid = (secondNum == a || secondNum == b)
+    val firstNumIsValid = (firstAnswer == firstNum || firstAnswer == secondNum)
+    val secondNumIsValid = (secondAnswer == firstNum || secondAnswer == secondNum)
 
     if (firstNumIsValid && secondNumIsValid) {
         println("Поздравляем! Вы выиграли главный приз!")
@@ -20,7 +20,7 @@ fun main() {
     } else {
         println("Неудача!")
     }
-    println("Правильные числа: $a и $b")
+    println("Правильные числа: $firstNum и $secondNum")
 }
 
 const val MIN_NUMBER = 0
