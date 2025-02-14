@@ -7,9 +7,9 @@ fun main() {
         length = MIN_LENGTH
     }
 
-    val smallLetters = ('a'..'z').joinToString("")
-    val capitalLetters = ('A'..'Z').joinToString("")
-    val numbers = (0..9).joinToString("")
+    val smallLetters = ('a'..'z')
+    val capitalLetters = ('A'..'Z')
+    val numbers = (0..9)
     val allChars = smallLetters + capitalLetters + numbers
 
     var password = ""
