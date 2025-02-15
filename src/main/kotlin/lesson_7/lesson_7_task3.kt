@@ -4,9 +4,7 @@ fun main() {
     println("Введите целое число больше 0:")
     val maxNumber = readln().toInt()
 
-    val progression = 0..maxNumber step 2
-
-    for (i in progression) {
+    for (i in 0..maxNumber step 2) {
         print("$i ")
     }
 }
