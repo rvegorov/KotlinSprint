@@ -7,8 +7,9 @@ fun main() {
     for (i in 1..5) {
         userList.add(readln())
     }
-
     userList.sort()
-    val ingredientsSting = userList.joinToString(", ").replaceFirstChar { it.uppercase() }
+    val newList = userList.distinctBy { it.lowercase() }
+
+    val ingredientsSting = newList.joinToString(", ").replaceFirstChar { it.uppercase() }
     println(ingredientsSting)
 }
