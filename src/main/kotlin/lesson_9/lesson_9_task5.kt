@@ -10,6 +10,6 @@ fun main() {
     userList.sort()
     val newList = userList.distinctBy { it.lowercase() }
 
-    val ingredientsSting = newList.joinToString(", ").replaceFirstChar { it.uppercase() }
-    println(ingredientsSting)
+    val ingredientsString = newList.joinToString(", ").replaceFirstChar { it.uppercase() }
+    println(ingredientsString)
 }
