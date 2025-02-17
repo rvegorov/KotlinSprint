@@ -12,8 +12,8 @@ fun main() {
 
     if (readln().equals("да", true)) {
         println("Какой ингредиент вы хотите добавить?")
-        val newIngredient = readln()
-        ingredientList.add(newIngredient)
+        ingredientList.add(readln())
+
         println("Теперь в рецепте есть следующие ингредиенты:")
         ingredientList.forEach { ingredient ->
             println(ingredient)
