@@ -4,12 +4,13 @@ fun main() {
     var userWins = 0
     do {
         userWins += if (round()) 1 else 0
-        println("Хотите бросить кости еще раз? Введите Да или Нет")// val userAnswer =
+        println("Хотите бросить кости еще раз? Введите Да или Нет")
     } while (readln() == "да")
     println("Победы человека $userWins")
 }
 
 private fun rollDice(): Int = (MIN_DICE..MAX_DICE).random()
+
 private fun round(): Boolean {
     val humanRoll = rollDice()
     println("Игрок бросает кости: $humanRoll")
