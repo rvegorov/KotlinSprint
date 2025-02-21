@@ -24,10 +24,8 @@ class User2(
         bio = readln()
     }
 
-    fun changePassword() {
-        println("Введите старый пароль:")
-
-        if (readln() == password) {
+    fun changePassword(oldPassword: String) {
+        if (oldPassword == password) {
             println("Введите новый пароль:")
             password = readln()
             println("Пароль изменен")
@@ -38,6 +36,6 @@ class User2(
 fun main() {
     val userObj = User2(2, "Alex", "1111", "alex111@mail.ru")
     userObj.writeBio()
-    userObj.changePassword()
+    userObj.changePassword("1111")
     userObj.printInfo()
 }
