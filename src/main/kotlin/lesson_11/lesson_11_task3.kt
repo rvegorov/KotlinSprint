@@ -1,7 +1,6 @@
 package org.example.lesson_11
 
 class RoomUser(
-    //val id: Int,
     val name: String,
     val avatar: String = "blank.jpg",
     var status: String = "разговаривет"
@@ -14,7 +13,7 @@ class Room(
     val roomCover: String = "empty.jpg",
 ) {
     fun addUser(user: RoomUser) {
-        users.add(user)
+        if (users.none { it.name == user.name }) users.add(user)
     }
 
     fun changeUserStatus(userName: String, newUserStatus: String) {
