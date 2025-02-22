@@ -5,7 +5,7 @@ class User2(
     val login: String,
     var password: String,
     val email: String,
-    var bio: String = ""
+    var bio: String? = null
 ) {
     fun printInfo() {
         println(
@@ -14,7 +14,7 @@ class User2(
             |Логин: $login
             |Пароль: $password
             |Почта: $email
-            |О себе: $bio
+            |О себе: ${bio ?: "<не указано>"}
         """.trimMargin()
         )
     }
