@@ -3,13 +3,12 @@ package org.example.lesson_11
 class Member(
     val userId: Int,
     val userName: String
-) {}
+)
 
 class Message(
     val authorId: Int,
     val message: String
-) {}
-
+)
 
 class Forum(
     val forumName: String,
