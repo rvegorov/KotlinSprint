@@ -18,7 +18,6 @@ fun main() {
         Contact3("Остап", 88005553535, "Рога и Копыта"),
         Contact3("Сергей", 88003331000, "МММ")
     )
-    val companyNames = mutableListOf<String>()
-    contactList.forEach { if (it.company != null) companyNames.add(it.company) }
+    val companyNames = contactList.mapNotNull { it.company }
     companyNames.forEach { println(it) }
 }
