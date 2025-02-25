@@ -5,7 +5,7 @@ class User(
     private val password: String,
 ) {
     fun validatePassword(checkPassword: String): Boolean {
-        return (checkPassword == password)
+        return checkPassword == password
     }
 }
 
