@@ -37,17 +37,18 @@ class Rectangle(
 
 fun main() {
     val figuresList: List<Figure> = listOf(
-        Circle(2.0, "black"),
-        Circle(10.5, "white"),
-        Rectangle(10.0, 10.0, "black"),
-        Rectangle(5.7, 10.2, "white")
+        Circle(2.0, BLACK),
+        Circle(10.5, WHITE),
+        Rectangle(10.0, 10.0, BLACK),
+        Rectangle(5.7, 10.2, WHITE)
     )
-    var perimeterOfBlacks = 0.0
-    figuresList.forEach { if (it.color == "black") perimeterOfBlacks += it.calcPerimeter() }
 
-    var areaOfWhites = 0.0
-    figuresList.forEach { if (it.color == "white") areaOfWhites += it.calcArea() }
+    val perimeterOfBlacks = figuresList.filter { it.color == BLACK }.sumOf { it.calcPerimeter() }
+    val areaOfWhites = figuresList.filter { it.color == WHITE }.sumOf { it.calcArea() }
 
     println("Периметр всех чёрных фигур: $perimeterOfBlacks")
     println("Площадь всех белых фигур: $areaOfWhites")
 }
+
+const val BLACK = "black"
+const val WHITE = "white"
