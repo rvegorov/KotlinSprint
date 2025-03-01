@@ -11,7 +11,7 @@ class User(
         }
     var password: String = password
         get() {
-            return field.map { '*' }.joinToString("")
+            return "*".repeat(field.length)
         }
         set(value) {
             println("Вы не можете изменить пароль")
