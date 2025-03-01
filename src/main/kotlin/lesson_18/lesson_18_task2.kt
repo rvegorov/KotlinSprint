@@ -1,25 +1,22 @@
 package org.example.lesson_18
 
 abstract class Dice {
-    abstract fun roll()
+    abstract val edgesNumber: Int
+    fun roll() {
+        println((1..edgesNumber).random())
+    }
 }
 
 class Dice4() : Dice() {
-    override fun roll() {
-        println((1..4).random())
-    }
+    override val edgesNumber = 4
 }
 
 class Dice6() : Dice() {
-    override fun roll() {
-        println((1..6).random())
-    }
+    override val edgesNumber = 6
 }
 
 class Dice8() : Dice() {
-    override fun roll() {
-        println((1..8).random())
-    }
+    override val edgesNumber = 8
 }
 
 fun main() {
