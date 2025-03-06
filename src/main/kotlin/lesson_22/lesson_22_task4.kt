@@ -6,10 +6,10 @@ data class MainScreenState(
 )
 
 class MainScreenViewModel(var mainScreenState: MainScreenState) {
-    fun loadData(){
-        mainScreenState =  mainScreenState.copy(data = "отсутствие данных")
+    fun loadData() {
+        mainScreenState = mainScreenState.copy(data = "отсутствие данных")
         println(mainScreenState.data)
-        mainScreenState =  mainScreenState.copy(data = "загрузка данных", isLoading = true)
+        mainScreenState = mainScreenState.copy(data = "загрузка данных", isLoading = true)
         println(mainScreenState.data)
         mainScreenState = mainScreenState.copy(data = "наличие загруженных данных", isLoading = false)
         println(mainScreenState.data)
